@@ -25,7 +25,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: url('https://images.unsplash.com/photo-1572597656132-cb8123c23eef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      background: url(Images/Ficherboote.png) no-repeat center center/cover;
       height: 100vh;
       color: #fff;
       text-align: center;
@@ -152,6 +152,7 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
+      cursor: pointer;
     }
 
     .portfolio-item:hover {
@@ -172,6 +173,54 @@
 
     .portfolio-item p {
       font-size: 1rem;
+    }
+
+    /* IMAGE MODAL (SLIDESHOW) */
+    #imageModal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #imageModal .modal-content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 90%;
+    }
+
+    #imageModal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .modal-arrow {
+      color: #fff;
+      font-size: 2rem;
+      position: absolute;
+      cursor: pointer;
+      user-select: none;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+
+    #modalPrev {
+      left: 2%;
+    }
+
+    #modalNext {
+      right: 2%;
     }
 
     /* FOOTER */
@@ -209,8 +258,8 @@
       </ul>
     </nav>
     <div class="header-content">
-      <h1>3D Modeling Portfolio</h1>
-      <p>Showcasing my best 3D creations, renders, and product visuals.</p>
+      <h1>3D Modeling Portfolio</h1>  
+      <p>Roblox Studio 3D creations, and product visuals.</p>
       <a href="#portfolio" class="btn">View Portfolio</a>
       <a href="#contact" class="btn">Contact Me</a>
     </div>
@@ -218,31 +267,37 @@
 
   <section class="about" id="about">
     <h2>About Me</h2>
-    <p>I'm a passionate 3D artist with experience in modeling, texturing, and rendering. My focus is on creating realistic 3D visuals for architectural designs, product prototypes, and creative projects.</p>
+    <p>Hey, Im akramer2k!</p>
+    <p>I'm a passionate 3D artist with experience in modeling. My focus is on creating realistic 3D places creative projects.</p>
   </section>
 
   <section class="portfolio" id="portfolio">
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1557503360-e7bded72881c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="3D Model 1" />
-        <h3>Architectural Visualization</h3>
-        <p>A modern house exterior with realistic textures and lighting.</p>
+      <div class="portfolio-item" data-project="Group1">
+        <img src="Images/GiantDrop.png" alt="GiantDrop" />
+        <h3>The Giant Drop</h3>
+        <p>A ride recreation of the giant drop at dreamworld theme park in australia.</p>
       </div>
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1551044320-5753f6f8f560?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="3D Model 2" />
-        <h3>Product Prototype</h3>
-        <p>A conceptual product render showcasing design and details.</p>
+      <div class="portfolio-item" data-project="Group2">
+        <img src="Images/Riddler.png" alt="Riddler" />
+        <h3>The Riddler</h3>
+        <p>A Ride recreation of Riddler Revolution at Warner Bros World.</p>
       </div>
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1581092655755-7e6afcbb179e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="3D Model 3" />
-        <h3>Character Model</h3>
-        <p>A stylized character model for a game concept.</p>
+      <div class="portfolio-item" data-project="Group3">
+        <img src="Images/WaterSlideStart.png" alt="WaterSlideStart" />
+        <h3>Water Slide Start</h3>
+        <p>The start spot of a water slide this model is still a work in progress.</p>
       </div>
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1637075395232-49d121fabd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="3D Model 4" />
-        <h3>Interior Render</h3>
-        <p>A cozy living room scene with photorealistic lighting.</p>
+      <div class="portfolio-item" data-project="Group3">
+        <img src="Images/WaterSlide.png" alt="WaterSlides" />
+        <h3>Water Slides</h3>
+        <p>Realstic Recreation of waterslides with an full working layout.</p>
+      </div>
+      <div class="portfolio-item" data-project="Group4">
+        <img src="Images/RockRollercoaster.png" alt="RockNRollercoaster" />
+        <h3>Rock N Rollercoaster</h3>
+        <p>A Realstic recreation of Rock N Rollercoaster ride full layout and realstic queue</p>
       </div>
     </div>
   </section>
@@ -250,12 +305,93 @@
   <section class="about" id="contact">
     <h2>Contact</h2>
     <p>Have a project in mind? Let's connect!</p>
-    <p><strong>Email:</strong> yourname@example.com</p>
-    <p><strong>Phone:</strong> +1 234 567 890</p>
+    <p><strong>Discord:</strong> akiscool</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p>&copy; 2025 akramer2k. All rights reserved.</p>
   </footer>
+
+  <!-- SLIDESHOW MODAL -->
+  <div id="imageModal">
+    <div class="modal-content">
+      <span id="modalPrev" class="modal-arrow">&#10094;</span>
+      <img id="modalImg" src="" alt="Expanded Image" />
+      <span id="modalNext" class="modal-arrow">&#10095;</span>
+    </div>
+  </div>
+
+  <script>
+    // Select all portfolio items
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalPrev = document.getElementById('modalPrev');
+    const modalNext = document.getElementById('modalNext');
+
+    // We'll keep track of the current group of images and the current index
+    let currentImages = [];
+    let currentIndex = 0;
+
+    // Function to open the modal for a given project group at a specific image index
+    function openModal(imagesArray, index) {
+      currentImages = imagesArray;
+      currentIndex = index;
+      modalImg.src = currentImages[currentIndex].src;
+      modal.style.display = 'flex';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    // Show the next image in the currentImages array
+    function showNext() {
+      currentIndex = (currentIndex + 1) % currentImages.length;
+      modalImg.src = currentImages[currentIndex].src;
+    }
+
+    // Show the previous image in the currentImages array
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+      modalImg.src = currentImages[currentIndex].src;
+    }
+
+    // Add event listeners to each portfolio item
+    portfolioItems.forEach((item) => {
+      const img = item.querySelector('img');
+      const projectGroup = item.getAttribute('data-project');
+
+      // On click, we only gather images with the same data-project
+      img.addEventListener('click', () => {
+        // Gather all images that share this data-project
+        const sameProjectItems = document.querySelectorAll(`.portfolio-item[data-project="${projectGroup}"] img`);
+        const imagesArray = Array.from(sameProjectItems);
+        // Find the index of the clicked image within this group
+        const clickedIndex = imagesArray.indexOf(img);
+        // Open the modal with that subset of images
+        openModal(imagesArray, clickedIndex);
+      });
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Prevent modal close when clicking on arrows or image
+    modalImg.addEventListener('click', (e) => e.stopPropagation());
+    modalPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showPrev();
+    });
+    modalNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showNext();
+    });
+  </script>
 </body>
 </html>
