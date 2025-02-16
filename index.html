@@ -175,7 +175,11 @@
       font-size: 1rem;
     }
 
-    /* IMAGE MODAL (SLIDESHOW) */
+    .hidden-item {
+      display: none !important;
+    }
+
+    /* IMAGE MODAL */
     #imageModal {
       display: none;
       position: fixed;
@@ -275,25 +279,27 @@
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item" data-project="Group1">
-        <img src="Images/GiantDrop.png" alt="GiantDrop" />
+        <img src="Images/GiantDrop.png" alt="Image"/>
         <h3>The Giant Drop</h3>
         <p>A ride recreation of the giant drop at dreamworld theme park in australia.</p>
       </div>
       <div class="portfolio-item" data-project="Group2">
-        <img src="Images/Riddler.png" alt="Riddler" />
+        <img src="Images/Riddler.png" alt="Image"/>
         <h3>The Riddler</h3>
         <p>A Ride recreation of Riddler Revolution at Warner Bros World.</p>
       </div>
       <div class="portfolio-item" data-project="Group3">
-        <img src="Images/WaterSlideStart.png" alt="WaterSlideStart" />
-        <h3>Water Slide Start</h3>
-        <p>The start spot of a water slide this model is still a work in progress.</p>
-      </div>
-      <div class="portfolio-item" data-project="Group3">
-        <img src="Images/WaterSlide.png" alt="WaterSlides" />
+        <img src="Images/WaterSlide.png" alt="Image"/>
         <h3>Water Slides</h3>
         <p>Realstic Recreation of waterslides with an full working layout.</p>
       </div>
+    </div>
+
+    <div class="portfolio-item hidden-item" data-project="Group2">
+      <img src="Images/Riddler2.png" alt="Image"/>
+    </div>
+    <div class="portfolio-item hidden-item" data-project="Group3">
+      <img src="Images/WaterSlideStart.png" alt="Image"/>
     </div>
   </section>
 
